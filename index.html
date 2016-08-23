@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script> src="https://code.jquery.com/jquery-3.1.0.js"   integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/scripts.js"></script>
+    <title></title>
+  </head>
+  <body>
+  <div class="container">
+    <h1>Movie Ticket Tool</h1>
+    <form>
+      <div class="radio">
+        <label>
+          <input type="radio" name="age" value="child">
+          Under 12
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="age" value="adult">
+          12-64
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="age" value="senior">
+          65 or older
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="neworold" value="new">
+          Captain Awesome: Revenge of Dr. Lame
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="neworold" value="new">
+          When Dexter Met Sunflower
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="neworold" value="new">
+          The Screamening IV: Jaw Bone
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="neworold" value="old">
+          Pot and Pans
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="neworold" value="old">
+          Martha's Niece
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="neworold" value="old">
+          Stripes
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="time" value="matinee">
+          Before 6pm
+        </label>
+      </div><div class="radio">
+        <label>
+          <input type="radio" name="time" value="primetime">
+          6pm or later
+        </label>
+      </div>
+      <button class="btn" type="submit">Find my ticket!</button>
+    </form>
+
+    <div id="ticketresults">
+      <h3>Your ticket costs $<span id="ticketprice"></span>.</h3>
+    </div>
+  </div>
+  </body>
+</html>
