@@ -1,0 +1,14 @@
+.jumbotron, h1, h3 {
+  font-family: 'Creepster', cursive;
+}
+
+form {
+  font-family: 'Athiti', sans-serif;
+}
+
+.jumbotron {
+  text-align: center;
+  background-color: #ccff99;
+  text-shadow: 2px 2px darkred;
+}
+ 

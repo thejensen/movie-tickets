@@ -4,31 +4,6 @@ this.customerAge = age;
 this.movieTime = time;
 }
 
-var basePrice = 10;
-
-if (newTicket.movieChoice === "captain" || "dexter" || "screamening") {
-  basePrice += 2
-} else {
-  basePrice += 0
-}
-
-if (newTicket.customerAge === "child") {
-  basePrice -= 3
-} else if (Ticket.customerAge === "senior") {
-  basePrice -= 2
-} else {
-  basePrice -= 0
-}
-
-if (newTicket.movieTime === "primetime") {
-  basePrice += 2
-} else {
-  basePrice += 0
-}
-
-Ticket.prototype.ticketMaker = function() {
-  return basePrice;
-}
 
 // User interface logic
 //
@@ -45,13 +20,37 @@ $(document).ready(function() {
     event.preventDefault();
 
     var inputtedMovieChoice = $("input:radio[name=movie]:checked").val();
-    console.log(inputtedMovieChoice);
     var inputtedcustomerAge = $("input:radio[name=age]:checked").val();
     var inputtedmovieTime = $("input:radio[name=time]:checked").val();
 
     var newTicket = new Ticket(inputtedMovieChoice, inputtedcustomerAge, inputtedmovieTime);
-    console.log(newTicket);
 
-    $("#ticketprice").text(newTicket.ticketMaker());
+    var basePrice = 10;
+
+    if (newTicket.movieChoice === "captain" || "dexter" || "screamening") {
+      basePrice += 2
+    } else {
+      basePrice += 0
+    }
+
+    if (newTicket.customerAge === "child") {
+      basePrice -= 3
+    } else if (Ticket.customerAge === "senior") {
+      basePrice -= 2
+    } else {
+      basePrice -= 0
+    }
+
+    if (newTicket.movieTime === "primetime") {
+      basePrice += 2
+    } else {
+      basePrice += 0
+    }
+
+    Ticket.prototype.ticketMaker = function() {
+      return basePrice;
+    }
+
+    $("#ticketprice").text(basePrice);
   });
 });
